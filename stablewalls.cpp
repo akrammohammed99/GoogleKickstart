@@ -72,6 +72,7 @@ int main()
         flag = 0;
         memset(visited, 0, sizeof(visited));
         memset(vis, 0, sizeof(vis));
+        // checking if there is a cycle
         for(char i: t) //for each unique node
         {
           //cout<<(i-'A')<<"\n";
@@ -84,6 +85,7 @@ int main()
             cout<<"Case #"<<z<<": "<<"-1"<<"\n";
         else
         {
+            // there is no cycle, time for the topological sorting
             string result ="";
             for(char x: t)
                 dfs(x-'A');
